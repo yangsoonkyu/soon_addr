@@ -1,0 +1,19 @@
+
+{% extends 'addr/base.html' %}
+
+
+{% block content %}
+            {% for friend in friends %}
+            <div class="friend">
+
+                <ul>
+                    <a href="{% url 'addr:friend_detail' pk=friend.pk %}">
+                        <li> 이름 : {{ friend.name }} 연락처 : {{ friend.phon_number_1 }}</li>
+                    </a>
+                </ul>
+
+            </div>
+
+            {% endfor %}
+
+{% endblock %}
